@@ -54,18 +54,12 @@ while jouer == True:
 
     if reponse1 == reponse2 :
         gagnant = "aucun de vous, vous être ex æquo"
-        score1 = score1 + 0
-        score2 = score2 + 0
-        
-    if reponse1 == 'pierre' and reponse2 == 'feuille' or reponse1 == 'feuille' and reponse2 == 'ciseaux' or reponse1 == 'ciseaux' and reponse2 == 'pierre':
+    elif reponse1 == 'pierre' and reponse2 == 'feuille' or reponse1 == 'feuille' and reponse2 == 'ciseaux' or reponse1 == 'ciseaux' and reponse2 == 'pierre':
         gagnant = nom2
-        score1 = score1 + 0
         score2 = score2 + 1
-      
-    if reponse1 == 'pierre' and reponse2 == 'ciseaux' or reponse1 == 'feuille' and reponse2 == 'pierre' or reponse1 == 'ciseaux' and reponse2 == 'feuille':
+    else :
         gagnant = nom1
         score1 = score1 + 1
-        score2 = score2 + 0
 
     print("le gagnant est",gagnant)
     print("Les scores à l'issue de cette manche sont donc",nom1, score1, "et", nom2, score2, "\n")
@@ -80,9 +74,8 @@ while jouer == True:
         continuer = input("Souhaitez vous refaire une partie {} contre {} ? (O/N) ".format(nom1,nom2))
         if continuer == 'O':
             jouer = True
-        if continuer != 'O' and continuer != 'N':
+        elif continuer != 'O' and continuer != 'N':
             jouer = True
             print("Vous ne répondez pas à la question, on continue")
-  
-if continuer == 'N' :
-    print("Merci d'avoir joué ! A bientôt")
+        else :
+            print("Merci d'avoir joué ! A bientôt")
