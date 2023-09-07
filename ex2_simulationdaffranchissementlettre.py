@@ -3,7 +3,7 @@ import math
 tariffinal = 0 #float
 testtype = True #bool
 while testtype :
-    typelettre = input("Quel est le type de votre lettre parmi 'v' pour verte, 'p' pour prioritaire ou 'e' pour eco-pli ?").lower()
+    typelettre = input("Quel est le type de votre lettre parmi 'v' pour verte, 'p' pour prioritaire ou 'e' pour eco-pli ? : ").lower()
     if typelettre == "v" or "p" or "e" :
         testtype = False
     else :
@@ -13,7 +13,7 @@ POIDS = [20,100,250,500,1000,3000]
 TARIFVERTE = [1.16,2.32,4.00,6.00,7.50,10.50]
 TARIFPRIORITAIRE = [1.43,2.86,5.26,7.89,11.44]
 TARIFECOPLI = [1.14,2.28,3.92]
-poids = input("Quel est le poids de votre lettre en gramme ?" ).math.ceil() #int, converti en entier supérieur le + petit
+poids = float(input("Quel est le poids de votre lettre en gramme ? : " )) #.math.ceil() #int, converti en entier supérieur le + petit
 
 if typelettre == "v" :
     if poids < POIDS[0] :
@@ -49,7 +49,5 @@ if typelettre == "e" :
     elif poids < POIDS[2] :
         tariffinal = TARIFECOPLI[2]
 
-sticker = input("Voulez-vous un sticker de suivi ? Entrez 'O' pour oui et 'N' pour non")
- # à continuer faire un if et ajouter un prix
 
 print ("Le tarif pour votre lettre est de", tariffinal,"€.")
