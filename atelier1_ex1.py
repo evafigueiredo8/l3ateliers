@@ -1,8 +1,6 @@
 import math
 
-
-
-def message_imc (imc) :
+def message_imc (imc : float) -> float :
 
     IMC = [16.5,18.5,25,30,35,40]
     INTERPRETATION = ["Dénutrition ou famine","Maigreur","Corpulence normale","Surpoids","Obésité modérée","Obésité sévère","Obésité morbide"]
@@ -26,7 +24,6 @@ def message_imc (imc) :
 
 def test_imc(imc):
     print("L'interprétation de votre IMC est : '" + message_imc(imc) + "'")
-
 
 test_imc(19)
 test_imc(16)
