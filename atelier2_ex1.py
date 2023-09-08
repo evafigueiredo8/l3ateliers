@@ -46,9 +46,9 @@ def test1_exercice1 ():
 
 test1_exercice1 ()
 
-def moyenne(L = list) -> int : 
+def moyenne(L = list) -> float : 
     '''Fonction qui utilise la boucle while'''
-    moyenne = 0
+    moyenne = 0 # float
     if L != [] :
         i=0 #int
 
@@ -72,7 +72,7 @@ test2_exercice1 ()
 
 def nb_sup (L = list,e = int) -> int :
 
-    nombre = 0
+    nombre = 0 # int
 
     for i in range (len(L)) :
         if e < L[i] :
@@ -82,7 +82,7 @@ def nb_sup (L = list,e = int) -> int :
 
 def nb_sup (L = list,e = int) -> int :
 
-    nombre = 0
+    nombre = 0 # int
 
     for i in L :
         if e < i :
@@ -96,8 +96,33 @@ def test3_exercice1 ():
     #test liste vide
     print("Test nb supérieurs : ", nb_sup([],0))
     #test nb sup
-    lst2test1=[1,10,100,1000,10000]
+    lst2test1=[1,10,100,1000,10000] # list
     print("Test moyenne : ", nb_sup(lst2test1, 15))
 
 test3_exercice1 ()
 
+def moy_sup (L = list,e = int) -> float :
+    moyenne_sup = 0 # int
+    liste_sup = []
+
+    if L != [] :
+        i=0 #int
+        while i<len(L) :
+            if e < i :
+                liste_sup += i
+                moyenne_sup += L[i]
+            i += 1
+        moyenne_sup = moyenne_sup / len(L)
+
+    return moyenne_sup
+
+def test4_exercice1 ():
+    '''Fonction qui permet de tester les fonctions de moyenne'''
+    print("TEST MOYENNE NOMBRES SUPERIEURS")
+    #test liste vide
+    print("Test moyenne nb supérieurs : ", moy_sup([],0))
+    #test moyenne nb sup
+    lst2test1=[1,10,100,1000,10000] # list
+    print("Test moyenne nb supérieurs : ", moy_sup(lst2test1, 15))
+
+test4_exercice1 ()
