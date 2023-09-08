@@ -1,21 +1,42 @@
 import math
 
-def somme1(L = list) -> int : 
-    '''Fonction qui utilise la boucle for et range'''
+def somme1(L = list) -> int :
+    """Fonction qui utilise la boucle for et range
+
+    Args:
+        L (_type_, optional): _description_. Defaults to list.
+
+    Returns:
+        int: _description_
+    """
     somme = 0
     for i in range (len(L)) :
         somme += L[i]
     return somme
 
 def somme2(L = list) -> int :
-    '''Fonction qui utilise la boucle for et in'''
+    """Fonction qui utilise la boucle for et in
+
+    Args:
+        L (_type_, optional): _description_. Defaults to list.
+
+    Returns:
+        int: _description_
+    """
     somme = 0
     for i in L :
         somme += i
     return somme
 
 def somme3(L = list) -> int :
-    '''Fonction qui utilise la boucle while'''
+    """Fonction qui utilise la boucle while
+
+    Args:
+        L (_type_, optional): _description_. Defaults to list.
+
+    Returns:
+        int: _description_
+    """
     somme = 0
     i=0 #int
     while i<len(L) :
@@ -40,8 +61,15 @@ def test1_exercice1 ():
 
 test1_exercice1 ()
 
-def moyenne(L = list) -> float : 
-    '''Fonction qui utilise la boucle while'''
+def moyenne(L = list) -> float :
+    """Fonction qui utilise la boucle while
+
+    Args:
+        L (_type_, optional): _description_. Defaults to list.
+
+    Returns:
+        float: _description_
+    """
     moyenne = 0 # float
     if L != [] :
         i=0 #int
@@ -63,7 +91,15 @@ def test2_exercice1 ():
 test2_exercice1 ()
 
 def nb_sup1 (L = list,e = int) -> int :
-    '''Fonction qui permet de recup le nb de valeurs supérieures à e dans la liste L avec for range'''
+    """Fonction qui permet de recup le nb de valeurs supérieures à e dans la liste L avec for range
+
+    Args:
+        L (_type_, optional): _description_. Defaults to list.
+        e (_type_, optional): _description_. Defaults to int.
+
+    Returns:
+        int: _description_
+    """
     nombre = 0 # int
     for i in range (len(L)) :
         if e < L[i] :
@@ -71,7 +107,15 @@ def nb_sup1 (L = list,e = int) -> int :
     return nombre
 
 def nb_sup2 (L = list,e = int) -> int :
-    '''Fonction qui permet de recup le nb de valeurs supérieures à e dans la liste L avec for in'''
+    """Fonction qui permet de recup le nb de valeurs supérieures à e dans la liste L avec for in
+
+    Args:
+        L (_type_, optional): _description_. Defaults to list.
+        e (_type_, optional): _description_. Defaults to int.
+
+    Returns:
+        int: _description_
+    """
     nombre = 0 # int
     for i in L :
         if e < i :
@@ -92,7 +136,15 @@ def test3_exercice1 ():
 test3_exercice1 ()
 
 def moy_sup (L = list,e = int) -> float :
-    '''Fonction qui permet de calculer la moyenne des nb de valeurs supérieures à e dans la liste L'''
+    """Fonction qui permet de calculer la moyenne des nb de valeurs supérieures à e dans la liste L
+
+    Args:
+        L (_type_, optional): _description_. Defaults to list.
+        e (_type_, optional): _description_. Defaults to int.
+
+    Returns:
+        float: _description_
+    """
     moyenne_sup = 0 # int
     liste_sup = []
     if L:
@@ -116,7 +168,14 @@ def test4_exercice1 ():
 test4_exercice1 ()
 
 def val_max (L = list) -> float :
-    '''Fonction qui permet de trouver la valeur maximale de la liste'''
+    """Fonction qui permet de trouver la valeur maximale de la liste
+
+    Args:
+        L (_type_, optional): _description_. Defaults to list.
+
+    Returns:
+        float: _description_
+    """
     valeur = 0 # int
     for i in L :
         if valeur < i :
@@ -135,7 +194,14 @@ def test5_exercice1 ():
 test5_exercice1 ()
 
 def ind_max (L = list) -> float :
-    '''Fonction qui permet de trouver l'indice du nb max de la liste'''
+    """Fonction qui permet de trouver l'indice du nb max de la liste
+
+    Args:
+        L (_type_, optional): _description_. Defaults to list.
+
+    Returns:
+        float: _description_
+    """
     indice = 0 # int
     for i in range (len(L)) :
         if L[i] == val_max (L) :
