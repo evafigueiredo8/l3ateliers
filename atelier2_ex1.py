@@ -70,4 +70,34 @@ def test2_exercice1 ():
 
 test2_exercice1 ()
 
-def nb_sup (L,e)
+def nb_sup (L = list,e = int) -> int :
+
+    nombre = 0
+
+    for i in range (len(L)) :
+        if e < L[i] :
+            nombre += 1
+
+    return nombre
+
+def nb_sup (L = list,e = int) -> int :
+
+    nombre = 0
+
+    for i in L :
+        if e < i :
+            nombre += 1
+
+    return nombre
+
+def test3_exercice1 ():
+    '''Fonction qui permet de tester les fonctions de moyenne'''
+    print("TEST NOMBRES SUPERIEURS")
+    #test liste vide
+    print("Test nb supérieurs : ", nb_sup([],0))
+    #test nb sup
+    lst2test1=[1,10,100,1000,10000]
+    print("Test moyenne : ", nb_sup(lst2test1, 15))
+
+test3_exercice1 ()
+
