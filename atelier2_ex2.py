@@ -55,3 +55,18 @@ def nb_occurrences(lst = list, e = int) -> int :
     return nombre
 
 print(nb_occurrences([2,4,3,4,6,9],4))
+
+def est_triee1(lst = list) -> bool :
+    e = 0
+    i = 1
+    for i in range (len(lst)) :
+        if e < i :
+            triee = True
+            e += 1
+        else :
+            triee = False
+            i = len(lst)
+    return triee
+
+print(est_triee1([1,2,3,4,5,6]))
+print(est_triee1([1,2,3,4,7,6]))

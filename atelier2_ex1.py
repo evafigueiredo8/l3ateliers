@@ -143,7 +143,7 @@ def moy_sup (L = list,e = int) -> float :
         e (_type_, optional): _description_. Defaults to int.
 
     Returns:
-        float: _description_
+        float: moyenne des nb sup
     """
     moyenne_sup = 0 # int
     liste_sup = []
@@ -153,7 +153,7 @@ def moy_sup (L = list,e = int) -> float :
                 liste_sup.append(i)
                 moyenne_sup += i
         if liste_sup :
-            moyenne_sup = moyenne_sup / len(L)
+            moyenne_sup = moyenne(liste_sup)
     return moyenne_sup
 
 def test4_exercice1 ():
