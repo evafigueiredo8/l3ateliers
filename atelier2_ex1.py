@@ -1,6 +1,6 @@
 import math
 
-def somme1(L) -> int : #L de type liste
+def somme1(L = list) -> int : 
     '''Fonction qui utilise la boucle for et range'''
     somme = 0
 
@@ -9,7 +9,7 @@ def somme1(L) -> int : #L de type liste
 
     return somme
 
-def somme2(L) -> int : #L de type liste
+def somme2(L = list) -> int :
     '''Fonction qui utilise la boucle for et in'''
     somme = 0
 
@@ -18,7 +18,7 @@ def somme2(L) -> int : #L de type liste
 
     return somme
 
-def somme3(L) -> int : #L de type liste
+def somme3(L = list) -> int :
     '''Fonction qui utilise la boucle while'''
     somme = 0
     i=0 #int
@@ -46,7 +46,7 @@ def test1_exercice1 ():
 
 test1_exercice1 ()
 
-def moyenne(L) -> int : #L de type liste
+def moyenne(L = list) -> int : 
     '''Fonction qui utilise la boucle while'''
     moyenne = 0
     if L != [] :
@@ -69,3 +69,5 @@ def test2_exercice1 ():
     print("Test moyenne : ", moyenne(lst2test1))
 
 test2_exercice1 ()
+
+def nb_sup (L,e)
