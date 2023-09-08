@@ -29,9 +29,9 @@ def somme3(L) -> int : #L de type liste
 
     return somme
 
-'''La version while me parrait être la plus adaptée'''
+'''La version while me parrait être la plus adaptée car on ne connait pas le nombre de valeurs dans la liste L'''
 
-def test_exercice1 ():
+def test1_exercice1 ():
     '''Fonction qui permet de tester les fonctions de somme'''
     print("TEST SOMME")
     #test liste vide
@@ -44,4 +44,28 @@ def test_exercice1 ():
     print("Test somme 11111 : ", somme2(lst2test1))
     print("Test somme 11111 : ", somme3(lst2test1))
 
-test_exercice1 ()
+test1_exercice1 ()
+
+def moyenne(L) -> int : #L de type liste
+    '''Fonction qui utilise la boucle while'''
+    moyenne = 0
+    if L != [] :
+        i=0 #int
+
+        while i<len(L) :
+            moyenne += L[i]
+            i += 1
+        moyenne = moyenne / len(L)
+
+    return moyenne
+
+def test2_exercice1 ():
+    '''Fonction qui permet de tester les fonctions de moyenne'''
+    print("TEST MOYENNE")
+    #test liste vide
+    print("Test liste vide : ", moyenne([]))
+    #test moyenne
+    lst2test1=[1,10,100, 1000,10000]
+    print("Test moyenne : ", moyenne(lst2test1))
+
+test2_exercice1 ()
