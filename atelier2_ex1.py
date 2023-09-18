@@ -1,6 +1,6 @@
 import math
 
-def somme1(L = list) -> int :
+def somme1(L: list) -> int :
     """Fonction qui utilise la boucle for et range
 
     Args:
@@ -14,7 +14,7 @@ def somme1(L = list) -> int :
         somme += L[i]
     return somme
 
-def somme2(L = list) -> int :
+def somme2(L: list) -> int :
     """Fonction qui utilise la boucle for et in
 
     Args:
@@ -28,7 +28,7 @@ def somme2(L = list) -> int :
         somme += i
     return somme
 
-def somme3(L = list) -> int :
+def somme3(L: list) -> int :
     """Fonction qui utilise la boucle while
 
     Args:
@@ -61,7 +61,7 @@ def test1_exercice1 ():
 
 test1_exercice1 ()
 
-def moyenne(L = list) -> float :
+def moyenne(L :list) -> float :
     """Fonction qui utilise la boucle while
 
     Args:
@@ -90,7 +90,7 @@ def test2_exercice1 ():
 
 test2_exercice1 ()
 
-def nb_sup1 (L = list,e = int) -> int :
+def nb_sup1 (L : list,e :int) -> int :
     """Fonction qui permet de recup le nb de valeurs supérieures à e dans la liste L avec for range
 
     Args:
@@ -106,7 +106,7 @@ def nb_sup1 (L = list,e = int) -> int :
             nombre += 1
     return nombre
 
-def nb_sup2 (L = list,e = int) -> int :
+def nb_sup2 (L :list,e : int) -> int :
     """Fonction qui permet de recup le nb de valeurs supérieures à e dans la liste L avec for in
 
     Args:
@@ -135,7 +135,7 @@ def test3_exercice1 ():
 
 test3_exercice1 ()
 
-def moy_sup (L = list,e = int) -> float :
+def moy_sup (L : list,e : int) -> float :
     """Fonction qui permet de calculer la moyenne des nb de valeurs supérieures à e dans la liste L
 
     Args:
@@ -167,7 +167,7 @@ def test4_exercice1 ():
 
 test4_exercice1 ()
 
-def val_max (L = list) -> float :
+def val_max (L : list) -> float :
     """Fonction qui permet de trouver la valeur maximale de la liste
 
     Args:
@@ -193,7 +193,7 @@ def test5_exercice1 ():
 
 test5_exercice1 ()
 
-def ind_max (L = list) -> float :
+def ind_max (L : list) -> float :
     """Fonction qui permet de trouver l'indice du nb max de la liste
 
     Args:
