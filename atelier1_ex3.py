@@ -62,9 +62,10 @@ def equation(a : int,b : int,c : int) :
     print(solution_equation(a,b,c))
 
 def test(a : int,b : int,c : int) -> str :
+    """Test des fonctions"""
     resultat = equation(a,b,c)
     return resultat
 
 test(5,6,7)
 test(1,0,-2)
-test(4,8,3)
+test(4,1,5)
