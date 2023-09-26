@@ -26,11 +26,9 @@ def outputStr(mot:str, lpos:list)-> str:
 
 
 def runGame():
-    liste = ['bonjour', 'bon', 'maman','table','chemise']
+    liste = build_list("capitales.txt")
     mot = random.choice(liste)
     print(outputStr(mot,[]))
-    i = 4
-
     trouve = ''
     nbcoups = 5
     indice = []
@@ -43,22 +41,25 @@ def runGame():
         if places_lettre(lettre,mot) == []:
             nbcoups -= 1
             e = nbcoups
-            while nbcoups <= i:
-                while e < nbcoups:
-                    print(dessins[e])
-                    e +=1
-                i -= 1
+            while e >= nbcoups:
+                for i in range(5-e):
+                    print(dessins[i])
+                e -=1
             if nbcoups == 0:
                 print("Vous avez perdu !")
             print ("Il vous reste" , nbcoups , "coups.")
+    if trouve == mot:
+        print("Vous avez gagné !")
 
-'''def build_list(file : str) -> list:
-    file = open("capitales.txt", "r")
+def build_list(file : str) -> list:
+    file = open(file, "r")
     contenu = file.readlines()
+    for i in range(len(contenu)):
+        contenu[i] = contenu[i].replace("\n", "")
+        contenu[i] = contenu[i].replace("Ã©", "é")
+        contenu[i] = contenu[i].replace("Ã¨", "è")
+        contenu[i] = contenu[i].lower()
     file.close()
-    liste = contenu.split("\t")
-    return liste
+    return contenu
     
-build_list("capitales.txt")'''
-
 runGame()
